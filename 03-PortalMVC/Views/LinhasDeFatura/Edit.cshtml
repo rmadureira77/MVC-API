@@ -1,0 +1,50 @@
+﻿@model _01_DAL.LinhaDeFatura
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editar Linhas de Fatura</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IdFaturas" class="control-label"></label>
+                <input asp-for="IdFaturas" class="form-control" />
+                <span asp-validation-for="IdFaturas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdProduto" class="control-label"></label>
+                <input asp-for="IdProduto" class="form-control" />
+                <span asp-validation-for="IdProduto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QuantidadeLinha" class="control-label"></label>
+                <input asp-for="QuantidadeLinha" class="form-control" />
+                <span asp-validation-for="QuantidadeLinha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrecoLinha" class="control-label"></label>
+                <input asp-for="PrecoLinha" class="form-control" />
+                <span asp-validation-for="PrecoLinha" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,44 @@
+﻿@model _01_DAL.LinhaDeFatura
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalhes da Linhas De Fatura</h1>
+
+<div>
+
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdFaturas)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdFaturas)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdProduto)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdProduto)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.QuantidadeLinha)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.QuantidadeLinha)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PrecoLinha)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PrecoLinha)
+        </dd>
+
+
+    </dl>
+</div>
+<div class="btn btn-primary">
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,9 @@
+﻿@model  _01_DAL.Empregado
+@{
+    ViewData["Title"] = "IndexAsync";
+}
+
+<h1>IndexAsync</h1>
+
+<label asp-for="NomeEmpregado"></label>
+<select asp-for="Id" asp-items="@(new SelectList(ViewBag.Message, "Id", "NomeEmpregado"))"></select>

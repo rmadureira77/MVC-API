@@ -1,0 +1,63 @@
+﻿@model IEnumerable<_01_DAL.Empregado>
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h1>Lista Empregados</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeEmpregado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroEmpregado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserEmpregado)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeEmpregado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroEmpregado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserEmpregado)
+            </td>
+            <td class="btn-group">
+                <div class="btn btn-primary">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+                </div>
+                <div class="btn btn-primary">
+                    @Html.ActionLink("Details", "Details", new { id = item.Id })
+                </div>
+                <div class="btn btn-primary">
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </div>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+<div class="btn btn-primary">
+
+    <a asp-action="Create">Create New</a>
+
+</div>
